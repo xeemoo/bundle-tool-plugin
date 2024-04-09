@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BundleToolPlugin</string>
+    <string name="title_dynamic_feature_one">DynamicOne</string>
+    <string name="title_dynamic_feature_two">DynamicTwo</string>
+    <string name="title_activity_dynamic_two">DynamicTwoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

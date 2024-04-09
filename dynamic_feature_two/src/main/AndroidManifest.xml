@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_dynamic_feature_two">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+
+        <dist:fusing dist:include="false" />
+    </dist:module>
+
+    <application>
+        <activity
+            android:name=".DynamicTwoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_dynamic_two"
+            android:theme="@style/Theme.BundleToolPlugin.Fullscreen" />
+    </application>
+
+</manifest>
