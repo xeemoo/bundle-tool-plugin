@@ -10,6 +10,9 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        //maven {
+        //    setUrl("bundletool-plugin/plugin/build/repo")
+        //}
     }
 }
 dependencyResolutionManagement {
