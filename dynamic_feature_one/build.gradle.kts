@@ -3,6 +3,11 @@ plugins {
     alias(libs.plugins.androidDynamicFeature)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
+
+kotlin {
+    jvmToolchain(11)
+}
+
 android {
     namespace = "io.github.xeemoo.dynamic_one"
     compileSdk = 34
