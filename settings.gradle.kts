@@ -27,3 +27,7 @@ rootProject.name = "BundleToolPlugin"
 include(":app")
 include(":dynamic_feature_one")
 include(":dynamic_feature_two")
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version("0.5.0")
+}

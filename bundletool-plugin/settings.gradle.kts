@@ -28,3 +28,7 @@ dependencyResolutionManagement {
 rootProject.name = "bundletool-plugin"
 
 include(":plugin")
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version("0.5.0")
+}
