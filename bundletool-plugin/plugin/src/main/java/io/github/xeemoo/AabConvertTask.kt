@@ -9,6 +9,7 @@ import com.android.tools.build.bundletool.commands.GetSizeCommand
 import com.android.tools.build.bundletool.model.GetSizeRequest
 import com.android.tools.build.bundletool.model.Password
 import com.android.tools.build.bundletool.model.SigningConfiguration
+import com.android.tools.build.bundletool.model.exceptions.CommandExecutionException
 import com.google.common.collect.ImmutableSet
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
@@ -62,7 +63,15 @@ abstract class AabConvertTask : DefaultTask() {
 
         val universalMode = ApkBuildMode.UNIVERSAL
         val buildApksCmd = buildApksCommand(inputAabFile, apksOutputFile, aapt2Path, sign, universalMode)
-        buildApksCmd.build().execute()
+        try {
+            buildApksCmd.build().execute()
+        } catch (ex: CommandExecutionException) {
+            if (ex.localizedMessage.contains("aapt2")) {
+                println("AAPT2 command failed. It is recommended that you specify an updated buildToolsVersion in your project. " +
+                        "See https://developer.android.com/tools/releases/build-tools")
+            }
+            throw ex
+        }
         println("buildUniversalApks Success.")
 
         val universalApk = File(apksOutputFile.parentFile, "universal.apk")

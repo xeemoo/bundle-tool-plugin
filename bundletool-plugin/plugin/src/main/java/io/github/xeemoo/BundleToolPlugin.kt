@@ -45,12 +45,6 @@ class BundleToolPlugin : Plugin<Project> {
                 }
 
                 // booster中提供的方案
-                // FIXME: 这种写法获取的aapt2路径，会根据依赖插件的那个工程的AGP版本不同而不同
-                //   e.g.
-                //   agp=7.4.2  -->  sdk/build-tools/30.0.3/aapt2
-                //   agp=8.1.4  -->  sdk/build-tools/33.0.1/aapt2
-                //   使用30.0.3的aapt2，库com.google.android.material:material:1.7.0开始会转换错误
-                //   failed to deserialize resources.pb: unknown type 'macro'
                 val buildTool =
                     (variant as VariantImpl<*>).global.versionedSdkLoader.get().buildToolInfoProvider.get()
                 val aapt2Path = buildTool.getPath(BuildToolInfo.PathId.AAPT2)
