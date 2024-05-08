@@ -12,6 +12,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.register
 import java.io.File
+import java.util.Locale
 
 class BundleToolPlugin : Plugin<Project> {
 
@@ -49,7 +50,11 @@ class BundleToolPlugin : Plugin<Project> {
                     (variant as VariantImpl<*>).global.versionedSdkLoader.get().buildToolInfoProvider.get()
                 val aapt2Path = buildTool.getPath(BuildToolInfo.PathId.AAPT2)
 
-                val taskName = "transformApkFromBundleFor${variant.name}"
+                val taskName = "transformApkFromBundleFor${
+                    variant.name.replaceFirstChar {
+                        if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()
+                    }
+                }"
                 project.tasks.register<AabConvertTask>(taskName) {
                     bundle.set(variant.artifacts.get(SingleArtifact.BUNDLE))
                     output.set(
