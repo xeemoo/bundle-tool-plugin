@@ -1,0 +1,131 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.xeemoo",
+    "module": "bundletool",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "bundletool-1.0.0.jar",
+          "url": "bundletool-1.0.0.jar",
+          "size": 20154,
+          "sha512": "1279eddce067fdfdf7da7561c3d6ee6779a5b019aa3b30797f01848157f30fec1347557d444680d9e05c6daf3d6dc9a9d816b3c348cb3ab3b0e72155d83d580b",
+          "sha256": "ee3e66f1afa0e06faacab4d1f17f5eb58937d534dde1ea791439a421f69bc87c",
+          "sha1": "38f5f817bc091213dc34a64284b3a52b320b05f5",
+          "md5": "3706b29fd73c229ba5c6baae5cc50857"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "33.0.0-android"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bundletool-1.0.0.jar",
+          "url": "bundletool-1.0.0.jar",
+          "size": 20154,
+          "sha512": "1279eddce067fdfdf7da7561c3d6ee6779a5b019aa3b30797f01848157f30fec1347557d444680d9e05c6daf3d6dc9a9d816b3c348cb3ab3b0e72155d83d580b",
+          "sha256": "ee3e66f1afa0e06faacab4d1f17f5eb58937d534dde1ea791439a421f69bc87c",
+          "sha1": "38f5f817bc091213dc34a64284b3a52b320b05f5",
+          "md5": "3706b29fd73c229ba5c6baae5cc50857"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bundletool-1.0.0-sources.jar",
+          "url": "bundletool-1.0.0-sources.jar",
+          "size": 3864,
+          "sha512": "c91b9b9ce30cf2d28e88f81ad09f96d98c52be00d8ec0bf3d56674f75430b8c6a61e2226ef3511a69ddecb466e00b036e3f96f5eeb22324fd6cb18c2d6bd51f7",
+          "sha256": "870fb02fe72aba72b5f0b79aec9a205e47356f9d5fa13e476d55204e14a7b067",
+          "sha1": "9de63db218e0548f0c8ab811ad07e3cf36488b00",
+          "md5": "e7696ab307b2ab96a9217f54e424b57b"
+        },
+        {
+          "name": "bundletool-1.0.0-sources.jar",
+          "url": "bundletool-1.0.0-sources.jar",
+          "size": 3864,
+          "sha512": "c91b9b9ce30cf2d28e88f81ad09f96d98c52be00d8ec0bf3d56674f75430b8c6a61e2226ef3511a69ddecb466e00b036e3f96f5eeb22324fd6cb18c2d6bd51f7",
+          "sha256": "870fb02fe72aba72b5f0b79aec9a205e47356f9d5fa13e476d55204e14a7b067",
+          "sha1": "9de63db218e0548f0c8ab811ad07e3cf36488b00",
+          "md5": "e7696ab307b2ab96a9217f54e424b57b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bundletool-1.0.0-javadoc.jar",
+          "url": "bundletool-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "74d1464b99c5ff3111b7cd117cf879e85c660f0d09ef0555844185e93acdf0d14ed8741669c1f18e45c23f6b3b3213cb1f0f34543a2c0500be3e86f9c67796b4",
+          "sha256": "52a1d530b33ad83703b06823324dcb4eba641b6e24b2e33f466606e3e5481de4",
+          "sha1": "8e324d4d55fbf3b8f76a02933485c4977d09aa6d",
+          "md5": "5a775856b4c0966060fbb6597b6e1201"
+        },
+        {
+          "name": "bundletool-1.0.0-javadoc.jar",
+          "url": "bundletool-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "74d1464b99c5ff3111b7cd117cf879e85c660f0d09ef0555844185e93acdf0d14ed8741669c1f18e45c23f6b3b3213cb1f0f34543a2c0500be3e86f9c67796b4",
+          "sha256": "52a1d530b33ad83703b06823324dcb4eba641b6e24b2e33f466606e3e5481de4",
+          "sha1": "8e324d4d55fbf3b8f76a02933485c4977d09aa6d",
+          "md5": "5a775856b4c0966060fbb6597b6e1201"
+        }
+      ]
+    }
+  ]
+}
